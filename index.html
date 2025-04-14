@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>رسالة حب ليكي</title>
+  <title>2025/4/13</title>
+  <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Reem Kufi', sans-serif;
+      background: #fff0f5 url('image.png') center center no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    h1 {
+      color: #b03060;
+      font-size: 3em;
+      text-shadow: 2px 2px 8px #ffc0cb;
+      z-index: 1;
+    }
+
+    .name-tag {
+      font-size: 1.4em;
+      background-color: rgba(255, 192, 203, 0.6);
+      padding: 10px 35px;
+      border-radius: 30px;
+      color: #8b008b;
+      margin: 15px;
+      z-index: 1;
+      box-shadow: 0 0 15px #ffb6c1;
+    }
+
+    button {
+      padding: 15px 45px;
+      font-size: 1.3em;
+      background-color: #ffb6c1;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 6px 20px rgba(255,182,193,0.6);
+      z-index: 1;
+    }
+
+    button:hover {
+      background-color: #ffc0cb;
+      transform: scale(1.07);
+    }
+
+    .message {
+      margin-top: 30px;
+      font-size: 1.6em;
+      color: #a0528a;
+      background-color: rgba(255, 250, 255, 0.85);
+      padding: 25px 35px;
+      border-radius: 25px;
+      box-shadow: 0 0 25px #f7c8e0;
+      max-width: 80%;
+      text-align: center;
+      white-space: pre-wrap;
+      z-index: 1;
+    }
+
+    .hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .heart {
+      position: absolute;
+      font-size: 24px;
+      color: #ff69b4;
+      animation: float 6s linear infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💖 رسالة حب ليكي 💖</h1>
+  <div class="name-tag">إلى: <strong>أجمل بنت في الدنيا 🌷</strong></div>
+
+  <button onclick="startLove()">ابدأ</button>
+
+  <div class="message" id="message"></div>
+  <div class="hearts" id="heartsContainer"></div>
+
+  <audio id="romanticMusic" src="https://dl.sndup.net/zdx6/romantic.mp3"></audio>
+
+  <script>
+    const messageText = "بصي يا بتول إنتي مش بس حب إنتي الحياة اللي بحب أعيشها كل يوم 💗\nبحبك من قلبي يا أجمل حاجة في حياتي 🌸";
+    const messageEl = document.getElementById("message");
+    const music = document.getElementById("romanticMusic");
+
+    function startLove() {
+      typeMessage(messageText);
+      createHearts();
+      music.play();
+    }
+
+    function typeMessage(text) {
+      messageEl.innerText = "";
+      let i = 0;
+      const interval = setInterval(() => {
+        if (i < text.length) {
+          messageEl.innerText += text.charAt(i);
+          i++;
+        } else {
+          clearInterval(interval);
+        }
+      }, 70);
+    }
+
+    function createHearts() {
+      const container = document.getElementById("heartsContainer");
+      for (let i = 0; i < 30; i++) {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerText = "💖";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = 2 + Math.random() * 3 + "s";
+        container.appendChild(heart);
+        setTimeout(() => heart.remove(), 6000);
+      }
+    }
+  </script>
+
+</body>
+</html>
+<div style="
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 1.4em;
+  color: #a0528a;
+  background-color: rgba(255, 240, 245, 0.8);
+  padding: 10px 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #ffc0cb;
+  margin-top: 20px;
+  text-align: center;
+">
+  2025/4/13
+</div>
